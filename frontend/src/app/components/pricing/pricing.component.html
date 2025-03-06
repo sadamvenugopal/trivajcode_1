@@ -1,0 +1,39 @@
+<section id="pricing">
+  <div class="pricing-intro">
+    <h2>Amazing Web Designs for Businesses Everywhere</h2>
+    <p>
+      Our team of Angular web designers and developers, eCommerce website designers, and pretty much any website design experts, set us apart from some of the best web design and development companies online. Looking for something unique, like custom Angular web designs? Look no further. Our Angular website designers are more than equipped to take over your project. Moreover, our Angular web designers also handle web maintenance once the project is deployed. Our web design and development team approaches web interfaces in a highly creative and innovative way. Reach out to us today and discuss your web design or development project.
+    </p>
+  </div>
+
+  <div class="pricing-container">
+    <div class="pricing-card" *ngFor="let package of packages">
+      <h3>{{ package.title }}</h3>
+      <div class="divider"></div> <!-- Added divider here -->
+      
+      <!-- Price Section with old price -->
+      <h1 class="price">
+        {{ package.price }}
+        <span *ngIf="package.period" ></span>
+
+        <span *ngIf="package.oldPrice" class="old-price">
+          <del>{{ package.oldPrice }}</del>
+          <span *ngIf="package.period"></span>
+        </span>
+      </h1>
+
+      <p>{{ package.description }}</p>
+      
+      <ul>
+        <li *ngFor="let feature of package.features">
+          <b>{{ feature.title }}</b> 
+        </li>
+      </ul>
+      
+      <!-- <button class="buy-btn" (click)="navigateToLogin()">Launch </button> -->
+      <button class="buy-btn" (click)="openSignUpFormAndCloseMenu()">Launch </button>
+      <a class="learn-more-btn">Learn More</a>
+    </div>
+  </div>
+</section>
+<app-login-signup *ngIf="isSignUpFormVisible" (close)="closeSignUpForm()"></app-login-signup>

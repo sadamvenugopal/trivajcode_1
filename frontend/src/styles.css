@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* WhatsApp Icon Styles */
+  .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #25d366; /* WhatsApp's green color */
+      border-radius: 50%; /* Round shape */
+      padding: 0px 9px;  /* Adjusted padding for a better proportion */
+      font-size: 46px; /* Larger font size for a prominent icon */
+      color: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      z-index: 9999;
+    }
+    
+    .whatsapp-icon i {
+      font-size: 40px; /* Smaller size for the Font Awesome icon */
+    }
+    /* WhatsApp Icon Hover Effect */
+    .whatsapp-icon:hover {
+      background-color: #128c7e; /* Darker green when hovered */
+    }
+    
+    /* Media Query for Tablets and Small Screens */
+    @media (max-width: 768px) {
+      .whatsapp-icon {
+        font-size: 0px;  /* Slightly smaller icon */
+        padding:  8px 10px /* Adjust padding */
+      }
+  
+      .whatsapp-icon i {
+          font-size: 30px; /* Smaller size for the Font Awesome icon */
+        }
+    }
+    
+    /* Media Query for Mobile Screens */
+    @media (max-width: 480px) {
+      .whatsapp-icon {
+        font-size: 13px;  /* Even smaller icon */
+        padding:  8px 10px /* Adjust padding */
+      }
+  
+      .whatsapp-icon i {
+          font-size: 35px; /* Smaller size for the Font Awesome icon */
+        }
+    }
+    
+
+    .no-scroll {
+      overflow: hidden;
+      height: 100%;
+    }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
