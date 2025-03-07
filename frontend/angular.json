@@ -16,7 +16,7 @@
             "index": "frontend/src/index.html",
             "main": "frontend/src/main.ts",
             "polyfills": "frontend/src/polyfills.ts",
-            "tsConfig": "frontend/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "assets": [
               "frontend/src/favicon.ico",
               "frontend/src/assets"
