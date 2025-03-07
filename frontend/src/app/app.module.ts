@@ -35,7 +35,10 @@ import { AuthGuard } from './auth.guard';
     RouterModule,
     SocialLoginModule, // ✅ Added SocialLoginModule for Google & Facebook login
     RouterModule.forRoot(appRoutes), // Configure routes
-
+    AppComponent, // Import the standalone component here
+    HeaderComponent, // Import the standalone component here
+    ClientformComponent, // Import the standalone component here
+    HomeComponent, // Import the standalone component here
 
   ],
   providers: [
