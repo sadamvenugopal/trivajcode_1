@@ -5,24 +5,24 @@
   "projects": {
     "frontend": {
       "projectType": "application",
-      "root": "frontend",
-      "sourceRoot": "frontend/src",
+      "root": "",
+      "sourceRoot": "src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "frontend/dist",
-            "index": "frontend/src/index.html",
-            "main": "frontend/src/main.ts",
-            "polyfills": "frontend/src/polyfills.ts",
+            "outputPath": "dist",
+            "index": "src/index.html",
+            "main": "src/main.ts",
+            "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              "frontend/src/favicon.ico",
-              "frontend/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "frontend/src/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           },
@@ -66,16 +66,16 @@
         "test": {
           "builder": "@angular-devkit/build-angular:karma",
           "options": {
-            "main": "frontend/src/test.ts",
-            "polyfills": "frontend/src/polyfills.ts",
-            "tsConfig": "frontend/tsconfig.spec.json",
-            "karmaConfig": "frontend/karma.conf.js",
+            "main": "src/test.ts",
+            "polyfills": "src/polyfills.ts",
+            "tsConfig": "tsconfig.spec.json",
+            "karmaConfig": "karma.conf.js",
             "assets": [
-              "frontend/src/favicon.ico",
-              "frontend/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
-              "frontend/src/styles.css"
+              "src/styles.css"
             ],
             "scripts": []
           }
