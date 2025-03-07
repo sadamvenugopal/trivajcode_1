@@ -9,24 +9,46 @@
       "sourceRoot": "frontend/src",
       "prefix": "app",
       "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:browser",
-          "options": {
-            "outputPath": "dist/frontend",
-            "index": "frontend/src/index.html",
-            "main": "frontend/src/main.ts",
-            "polyfills": "frontend/src/polyfills.ts",
-            "tsConfig": "frontend/tsconfig.app.json",
-            "assets": [
-              "frontend/src/favicon.ico",
-              "frontend/src/assets"
-            ],
-            "styles": [
-              "frontend/src/styles.css"
-            ],
-            "scripts": []
-          }
-        },
+"build": {
+  "builder": "@angular-devkit/build-angular:browser",
+  "options": {
+    "outputPath": "dist/frontend",
+    "index": "frontend/src/index.html",
+    "main": "frontend/src/main.ts",
+    "polyfills": "frontend/src/polyfills.ts",
+    "tsConfig": "frontend/tsconfig.app.json",
+    "assets": [
+      "frontend/src/favicon.ico",
+      "frontend/src/assets"
+    ],
+    "styles": [
+      "frontend/src/styles.css"
+    ],
+    "scripts": []
+  },
+  "configurations": {
+    "production": {
+      "fileReplacements": [
+        {
+          "replace": "frontend/src/environments/environment.ts",
+          "with": "frontend/src/environments/environment.prod.ts"
+        }
+      ],
+      "optimization": true,
+      "outputHashing": "all",
+      "sourceMap": false,
+      "extractCss": true,
+      "namedChunks": false,
+      "aot": true,
+      "extractLicenses": true,
+      "vendorChunk": false,
+      "buildOptimizer": true
+    },
+    "development": {
+      "fileReplacements": []
+    }
+  }
+},
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
