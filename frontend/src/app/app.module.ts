@@ -36,6 +36,7 @@ import { AuthGuard } from './auth.guard';
     SocialLoginModule, // ✅ Added SocialLoginModule for Google & Facebook login
     RouterModule.forRoot(appRoutes), // Configure routes
 
+
   ],
   providers: [
     MockupService,
