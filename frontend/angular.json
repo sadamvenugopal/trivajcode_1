@@ -5,7 +5,7 @@
   "projects": {
     "frontend": {
       "projectType": "application",
-      "root": "frontend",
+      "root": "",
       "sourceRoot": "frontend/src",
       "prefix": "app",
       "architect": {
